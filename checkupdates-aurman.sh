@@ -133,7 +133,7 @@ format_update() {
     default_values="${name_str} ${curr_version_str} ${BOLD}${MAGENTA}->${NORMAL} ${new_version_str}"
 
     if [ "$SETTING_ORIGIN" -eq 1 ]; then
-        FORMATTED_OUTPUT="${FORMATTED_OUTPUT} $(format_origin ${1}) ${default_values}"
+        FORMATTED_OUTPUT="${FORMATTED_OUTPUT} $(format_origin ${3}) ${default_values}"
     else
         FORMATTED_OUTPUT="${FORMATTED_OUTPUT} ${default_values}"
     fi
