@@ -43,7 +43,7 @@ It's just a simple shell file, just clone this repo or download it manually and 
 To use with [Arch Linux Updates Indicator](https://github.com/RaphaelRochet/arch-update), set this as your command to check for updates:
 
 ```bash
-/bin/sh -c "/home/dagr01/bin/checkupdates-aurman"
+/bin/sh -c "/path/to/checkupdates-aurman.sh"
 ```
 
 You need to toggle the "Strip out versions number"-option if you want the indicator to show full lines or origin tags.
