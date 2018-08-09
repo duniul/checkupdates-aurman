@@ -44,24 +44,23 @@ enable_colors() {
 print_help() {
 	printf '%s\n' "${BOLD}${BLUE}${SCRIPT_NAME}${NORMAL} @ ${BOLD}${YELLOW}v${SCRIPT_VERSION}${NORMAL}"
 	printf '\n'
-	printf '%s\n' "Print a list of available updates from both ${GREEN}official repositories${NORMAL} and the ${BLUE}AUR${NORMAL}."
+	printf '%s\n' "Outputs a list of available updates from both ${GREEN}official repositories${NORMAL} and the ${BLUE}AUR${NORMAL}."
 	printf '%s\n' "${BOLD}Requires aurman and jq.${NORMAL}"
 	printf '\n'
 	printf '%s\n' "${BOLD}Usage:${NORMAL}"
 	printf '    %s\n' "${SCRIPT_NAME} [...options]"
 	printf '\n'
 	printf '%s\n' "${BOLD}Options:${NORMAL}"
-	printf '    %-20s %s \n' "  -h, --help" "Show this screen."
-	printf '    %-20s %s \n' "  -c, --color" "Print list in ${BOLD}${GREEN}c${BLUE}o${YELLOW}l${CYAN}o${MAGENTA}r${NORMAL}."
-	printf '    %-20s %s \n' "  -t, --table" "Print list in the form of a table."
-	printf '    %-20s %s \n' "  -o, --origin" "Add a tag for each update, indicating the origin of the package."
+	printf '    %-18s %s \n' "-o, --origin" "Add tags to indicate the origin/type of each package."
+	printf '    %-18s %s \n' "-c, --color" "Print output in ${BOLD}${GREEN}c${BLUE}o${YELLOW}l${CYAN}o${MAGENTA}r${NORMAL}, also highlighting version changes."
+	printf '    %-18s %s \n' "-t, --table" "Print output as a table with aligned columns."
+	printf '    %-18s %s \n' "-h, --help" "Show this screen."
 	printf '\n'
-	printf '    %-20s %s \n' " " "Possible origin tags:"
-	printf '    %-20s %s \n' " " "${BOLD}${GREEN}[REP]${NORMAL} - Official repository packages (REPO_PACKAGE)"
-	printf '    %-20s %s \n' " " "${BOLD}${BLUE}[AUR]${NORMAL} - AUR packages (AUR_PACKAGE)"
-	printf '    %-20s %s \n' " " "${BOLD}${CYAN}[DEV]${NORMAL} - Development packages (DEVEL_PACKAGE)"
-	printf '    %-20s %s \n' " " "${BOLD}${YELLOW}[EXT]${NORMAL} - External packages (PACKAGE_NOT_REPO_NOT_AUR)"
-	printf '    %-20s %s \n' " " "${BOLD}${WHITE}[UNK]${NORMAL} - Unknown packages with missing type_of value"
+	printf '%s\n' "${BOLD}Origin tags:${NORMAL}"
+	printf '    %-14s  \n' "${BOLD}${GREEN}[REP]${NORMAL} - Official repository packages (REPO_PACKAGE)"
+	printf '    %-14s  \n' "${BOLD}${BLUE}[AUR]${NORMAL} - AUR packages (AUR_PACKAGE)"
+	printf '    %-14s  \n' "${BOLD}${CYAN}[DEV]${NORMAL} - Development packages (DEVEL_PACKAGE)"
+	printf '    %-14s  \n' "${BOLD}${YELLOW}[EXT]${NORMAL} - External packages (PACKAGE_NOT_REPO_NOT_AUR)"
 	printf '\n'
 }
 
